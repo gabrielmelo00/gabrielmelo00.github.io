@@ -36,6 +36,10 @@
       text-align: center;
     }
 
+    nav {
+      margin-bottom: 2rem;
+    }
+
     nav ul {
       list-style: none;
       padding: 0;
@@ -69,6 +73,12 @@
       text-align: left;
     }
 
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .profile-img {
       width: 130px;
       height: 130px;
@@ -85,9 +95,29 @@
       justify-content: center;
     }
 
+    .social-icons a {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: var(--accent-color);
+    }
+
+    .intro {
+      max-width: 400px;
+    }
+
     .intro h1 {
       font-size: 2.5rem;
       margin-bottom: 0.25rem;
+      letter-spacing: 0.5px;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      color: #555;
     }
 
     main {
@@ -106,36 +136,42 @@
       color: var(--accent-color);
     }
 
-    .edu-entry {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
+    p {
+      font-size: 1rem;
+      color: #444;
     }
 
-    .edu-entry img {
-      width: 60px;
-      height: 60px;
-      margin-right: 20px;
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: color 0.2s ease;
     }
 
-    .edu-info {
-      flex: 1;
+    a:hover {
+      color: #003dcc;
     }
 
-    .edu-info strong {
-      font-size: 1.1rem;
-      color: var(--text-color);
-    }
-
-    .edu-details {
-      font-size: 0.95rem;
-      color: #666;
-    }
-
-    .edu-date {
+    footer {
+      text-align: center;
       font-size: 0.9rem;
-      color: #888;
-      text-align: right;
+      color: #999;
+      padding: 2rem 1rem;
+      border-top: 1px solid #eaeaea;
+    }
+
+    @media (max-width: 600px) {
+      .intro h1 {
+        font-size: 2rem;
+      }
+
+      main {
+        padding: 2rem 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
   </style>
 </head>
@@ -143,20 +179,21 @@
   <header>
     <nav>
       <ul>
-        <li><a href="index.html">Main</a></li>
+        <li><a href="#main">Main</a></li>
         <li><a href="cv.html">CV</a></li>
-        <li><a href="index.html">Updates</a></li>
-        <li><a href="index.html">Projects</a></li>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#projects">Projects</a></li>
       </ul>
     </nav>
-    <div class="header-container">
+
+    <div class="header-container" id="main">
       <div class="profile">
         <img src="Images/BusPhoto.jpg" alt="Gabriel Melo" class="profile-img" />
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/gabrielsvmelo/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://scholar.google.com/citations?user=Vznn73wAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-          <a href="https://github.com/gabrielmelo00" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="mailto:gabriel.silva@ip-paris.fr"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/gabrielsvmelo/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=Vznn73wAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a href="https://github.com/gabrielmelo00" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:gabriel.silva@ip-paris.fr" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
       <div class="intro">
@@ -167,46 +204,29 @@
   </header>
 
   <main>
-    <section id="education">
-      <h2>Education</h2>
+    <section id="updates">
+      <h2>About Me</h2>
+      <p>
+        I'm a first year PhD student at Télécom Paris - Institut Polytechnique de Paris in Applied Mathematics and Computer Science, I'm part of the  <a href="https://s2a.telecom-paris.fr/" target="_blank">Signal Statistics and Machine Learning - S2A team</a> . I'm under the supervision of <a href="https://perso.telecom-paristech.fr/fdalche/" target="_blank">Florence d'Alché-Buc</a> and <a href="https://perso.telecom-paristech.fr/mozharovskyi/" target="_blank">Pavlo Mozharovskyi</a>.
+      </p>
+    </section>
 
-      <div class="edu-entry">
-        <img src="images/ipparis.png" alt="IP Paris">
-        <div class="edu-info">
-          <strong>Institut Polytechnique de Paris</strong><br>
-          PhD in Applied Mathematics and Computer Science<br>
-          <span class="edu-date">2025 – Present</span>
-        </div>
-      </div>
+    <section id="projects">
+      <h2>Research Topic</h2>
+      <p>
+        My project focuses on the development of machine learning methods for the analysis of complex data structures, such as graphs. I am particularly interested in the integration of uncertainty quantification techniques, such as multivariate quantile. My works involves the span of Optimal Transport, Kernel Methods and Deep Learning.
+      </p>
 
-      <div class="edu-entry">
-        <img src="images/yale.png" alt="Yale">
-        <div class="edu-info">
-          <strong>Yale University</strong><br>
-          Visiting Student — Computer Science & Optimization
-          <span class="edu-date">Fall 2023</span>
-        </div>
-      </div>
+      <p>
+        
+      </p>
+    </section>
 
-      <div class="edu-entry">
-        <img src="images/telecomparis.png" alt="Telecom Paris">
-        <div class="edu-info">
-          <strong>Telecom Paris - IP Paris</strong><br>
-          MSc in Computer Science, Applied Math & Quantum Computing<br>
-          GPA: 4.0/4.0, Minor: Economics
-          <span class="edu-date">2021 – 2023</span>
-        </div>
-      </div>
-
-
-      <div class="edu-entry">
-        <img src="images/unicamp.png" alt="UNICAMP">
-        <div class="edu-info">
-          <strong>State University of Campinas (UNICAMP)</strong><br>
-          BSc in Electrical Engineering, focus in Computer Science
-          <span class="edu-date">2018 – 2024</span>
-        </div>
-      </div>
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:gabriel.silva@ip-paris.fr">gabriel.silva@ip-paris.fr</a><br />
+      </p>
     </section>
   </main>
 
