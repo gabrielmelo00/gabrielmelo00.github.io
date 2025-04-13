@@ -184,7 +184,7 @@
       color: #666;
     }
 
-    .edu-date {
+    .edu-exta {
       font-size: 0.9rem;
       color: #888;
       text-align: right;
@@ -193,6 +193,16 @@
     .edu-entry img.telecom-logo {
       height: 80px;
       width: auto;
+    }
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .edu-date {
+      white-space: nowrap;
+      margin-left: 20px;
     }
 
     @media (max-width: 600px) {
@@ -247,28 +257,34 @@
       <div class="edu-entry">
         <img src="Images/ipparis.png" alt="IP Paris">
         <div class="edu-info">
-          <strong>Institut Polytechnique de Paris</strong><br>
-          PhD in Applied Mathematics and Computer Science<br>
-          <span class="edu-date">2025 – Present</span>
+          <div class="edu-header">
+            <strong>Institut Polytechnique de Paris</strong>
+            <span class="edu-date">2025 – Pres</span>
+          </div>
+          PhD in Applied Mathematics and Computer Science
         </div>
       </div>
 
       <div class="edu-entry">
         <img src="Images/yale.png" alt="Yale">
         <div class="edu-info">
-          <strong>Yale University</strong><br>
+          <div class="edu-header">
+            <strong>Yale University</strong>
+            <span class="edu-date">2023 - 2023</span>
+          </div>
           Visiting Student/Research Assistant — Computer Science<br>
-          <span class="edu-date">Under the supervision of Professor <a href="https://www.linzhong.org/" target="_blank">Lin Zhong</a> at <a href="https://www.yecl.org/" target="_blank">Efficient Computing Lab</a></span><br>
-          <span class="edu-date">2023 - 2023</span>
+          <span class="edu-exta">Under the supervision of Prof. <a href="https://www.linzhong.org/" target="_blank">Lin Zhong</a> at <a href="https://www.yecl.org/" target="_blank">Efficient Computing Lab</a></span><br> 
         </div>
       </div>
 
       <div class="edu-entry">
         <img src="Images/telecomparis.png" alt="Telecom Paris" class="telecom-logo">
         <div class="edu-info">
-          <strong>Telecom Paris - IP Paris</strong><br>
-          MSc in Engineering (Diplôme d'Ingénieur)<br>
-          <span class="edu-date">2021 – 2023</span>
+          <div class="edu-header">
+            <strong>Telecom Paris</strong>
+            <span class="edu-date">2021 – 2023</span>
+          </div>
+          MSc in Engineering (Diplôme d'Ingénieur)
         </div>
       </div>
 
@@ -276,9 +292,11 @@
       <div class="edu-entry">
         <img src="Images/unicamp.png" alt="UNICAMP">
         <div class="edu-info">
-          <strong>State University of Campinas (UNICAMP)</strong><br>
-          BSc in Electrical Engineering<br>
-          <span class="edu-date">2018 – 2024</span>
+          <div class="edu-header">
+            <strong>State University of Campinas (UNICAMP)</strong>
+            <span class="edu-date">2018 – 2021</span>
+          </div>
+          BSc in Computer Engineering
         </div>
       </div>
     </section>
