@@ -15,7 +15,7 @@
         <li><a href="#main">Main</a></li>
         <li><a href="cv.html">CV</a></li>
         <li><a href="updates.html">Updates</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
       </ul>
     </nav>
 
@@ -37,7 +37,7 @@
   </header>
 
   <main>
-    <section id="updates">
+    <section id="about-me">
       <h2>About Me</h2>
       <p>
         I'm a first year PhD student at Télécom Paris - Institut Polytechnique de Paris in Applied Mathematics and Computer Science, I'm part of the  <a href="https://s2a.telecom-paris.fr/" target="_blank">Signal Statistics and Machine Learning - S2A team</a> . I'm under the supervision of Prof. <a href="https://perso.telecom-paristech.fr/fdalche/" target="_blank">Florence d'Alché-Buc</a> and Prof. <a href="https://perso.telecom-paristech.fr/mozharovskyi/" target="_blank">Pavlo Mozharovskyi</a>.
@@ -69,32 +69,7 @@
       <a href="updates.html">See All Updates</a>
     </section>
 
-    <script>
-      fetch('updates.html')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.text();
-        })
-        .then(data => {
-          const tempDiv = document.createElement('div');
-          tempDiv.innerHTML = data;
-          const firstUpdate = tempDiv.querySelector('article');
-
-          if (firstUpdate) {
-            const updateDate = firstUpdate.querySelector('h3').innerText;
-            const updateText = firstUpdate.querySelector('p').innerText;
-            document.getElementById('latest-update').innerHTML = `
-              <strong>${updateDate}</strong><br />
-              ${updateText}
-            `;
-          }
-        })
-        .catch(error => console.error('Error fetching updates:', error));
-
-    </script>
-
+    <script src="fetchUpdates.js"></script>
 
     <section>
       <h2>Contact</h2>
