@@ -30,6 +30,7 @@ text-align: center;
 
 nav {
 margin-bottom: 2rem;
+position: relative;
 }
 
 nav ul {
@@ -258,6 +259,72 @@ border-top: 1px solid #eaeaea;
   background: #1e3a6e;
 }
 
+/* Theme toggle button */
+#theme-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#theme-toggle:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --bg-color: #0f1117;
+  --text-color: #e2e8f0;
+  --accent-color: #7ba4e8;
+  --header-gradient-start: #16213e;
+  --header-gradient-end: #0f1117;
+}
+
+[data-theme="dark"] header { color: var(--text-color); }
+[data-theme="dark"] p { color: #cbd5e1; }
+[data-theme="dark"] h2 { border-bottom-color: #2d3748; }
+[data-theme="dark"] nav a { color: #e2e8f0; }
+[data-theme="dark"] #theme-toggle { color: #e2e8f0; }
+[data-theme="dark"] .social-icons a { color: #e2e8f0; }
+[data-theme="dark"] .profile-img { border-color: #2d3748; box-shadow: 0 4px 16px rgba(0,0,0,0.5); }
+[data-theme="dark"] footer { border-top-color: #2d3748; color: #4b5563; }
+
+[data-theme="dark"] #projects ul li {
+  background: #1a2744;
+  color: #93b4e8;
+  border-color: #2d3748;
+}
+
+[data-theme="dark"] #latest-update p {
+  background: #1a1f2e;
+  color: #cbd5e1;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] #latest-update-section > a {
+  background: #4a6fa5;
+}
+
+[data-theme="dark"] #latest-update-section > a:hover {
+  background: #3a5a8a;
+}
+
+[data-theme="dark"] #teaching li {
+  background: #1a1f2e;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] #teaching h3 { color: #7ba4e8; }
+
 @media (max-width: 600px) {
     .intro h1 {
         font-size: 2rem;
@@ -270,5 +337,11 @@ border-top: 1px solid #eaeaea;
     nav ul {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    #theme-toggle {
+        position: static;
+        transform: none;
+        margin-top: 0.5rem;
     }
 }
