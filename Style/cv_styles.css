@@ -2,8 +2,8 @@
     --bg-color: #f9f9fb;
     --text-color: #222;
     --accent-color: #2b4c8f;
-    --header-gradient-start: #dddddd;
-    --header-gradient-end: #ffffff;
+    --header-gradient-start: #e8edf6;
+    --header-gradient-end: #f9f9fb;
     --section-padding: 3rem 1.5rem;
     --max-width: 800px;
   }
@@ -72,11 +72,12 @@ align-items: center;
 }
 
 .profile-img {
-width: 130px;
-height: 130px;
+width: 140px;
+height: 140px;
 border-radius: 50%;
 object-fit: cover;
-border: 2px solid #ccc;
+border: 3px solid white;
+box-shadow: 0 4px 16px rgba(43, 76, 143, 0.18);
 }
 
 .social-icons {
@@ -123,9 +124,13 @@ margin-bottom: 3rem;
 }
 
 h2 {
-font-size: 1.5rem;
-margin-bottom: 1rem;
+font-size: 1.4rem;
+margin-bottom: 1.25rem;
 color: var(--accent-color);
+font-weight: 700;
+letter-spacing: 0.3px;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid #dde4f2;
 }
 
 p {
