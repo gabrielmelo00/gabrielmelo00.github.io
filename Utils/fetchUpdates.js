@@ -12,8 +12,8 @@ fetch('updates.html')
 
     if (updates.length > 0) {
       document.getElementById('latest-update').innerHTML = updates.map(update => {
-        const date = update.querySelector('h3').innerText;
-        const text = update.querySelector('p').innerText;
+        const date = update.querySelector('h3').textContent;
+        const text = update.querySelector('p').innerHTML;
         return `<p><strong>${date}</strong><br />${text}</p>`;
       }).join('');
     }
