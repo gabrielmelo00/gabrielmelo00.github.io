@@ -8,15 +8,14 @@ fetch('updates.html')
   .then(data => {
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = data;
-    const firstUpdate = tempDiv.querySelector('article');
+    const updates = Array.from(tempDiv.querySelectorAll('article')).slice(0, 3);
 
-    if (firstUpdate) {
-      const updateDate = firstUpdate.querySelector('h3').innerText;
-      const updateText = firstUpdate.querySelector('p').innerText;
-      document.getElementById('latest-update').innerHTML = `
-        <strong>${updateDate}</strong><br />
-        ${updateText}
-      `;
+    if (updates.length > 0) {
+      document.getElementById('latest-update').innerHTML = updates.map(update => {
+        const date = update.querySelector('h3').innerText;
+        const text = update.querySelector('p').innerText;
+        return `<p><strong>${date}</strong><br />${text}</p>`;
+      }).join('');
     }
   })
   .catch(error => console.error('Error fetching updates:', error));
